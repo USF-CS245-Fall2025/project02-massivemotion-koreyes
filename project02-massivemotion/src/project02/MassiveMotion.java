@@ -11,7 +11,7 @@ import java.util.Random;
  * The main driver for the project, a Massive Motion class that
  * simulates comets moving across a 2D canvas at random velocities
  * with a central star, holding these as objects in a specified list type:
- * SinglyLinkedList, DoublyLinkedList, and DummyHeadLinkedList. This
+ * ArrayList, SinglyLinkedList, DoublyLinkedList, and DummyHeadLinkedList. This
  * class then continuously updates and repaints the objects using a 
  * timer. Furthermore, reading configurations such as the window size
  * and velocity from a property file.
