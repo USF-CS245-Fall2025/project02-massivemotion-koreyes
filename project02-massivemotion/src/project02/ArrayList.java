@@ -128,7 +128,7 @@ public class ArrayList<T> implements List<T>, Iterable<T> {
     }
     
     /**
-     * Anonymous inner class that returns an iterator over the elements
+     * Inner class that returns an iterator over the elements
      * in the list in the proper sequence.
      * 
      * @return an iterator for iterating through the list of elements.
@@ -164,4 +164,5 @@ public class ArrayList<T> implements List<T>, Iterable<T> {
             }
         };
     }
+
 }
