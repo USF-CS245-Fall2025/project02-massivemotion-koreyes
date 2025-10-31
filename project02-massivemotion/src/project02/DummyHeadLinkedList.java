@@ -27,7 +27,7 @@ public class DummyHeadLinkedList<T> implements List<T>, Iterable<T> {
         }
     }
 
-    private Node<T> head;  // Dummy head node (never holds actual data)
+    private Node<T> head;  // dummy head node
     private int size;
 
     /**
@@ -45,7 +45,6 @@ public class DummyHeadLinkedList<T> implements List<T>, Iterable<T> {
      * @param item the item to be added
      * @throws IndexOutOfBoundsException if the given position is out of range
      */
-    @Override
     public void add(int pos, T item) {
         if (pos < 0 || pos > size) {
             throw new IndexOutOfBoundsException();
@@ -65,7 +64,6 @@ public class DummyHeadLinkedList<T> implements List<T>, Iterable<T> {
      *
      * @return true if the item was added successfully
      */
-    @Override
     public boolean add(T item) {
         Node<T> curr = head;
         while (curr.next != null) {
@@ -83,7 +81,6 @@ public class DummyHeadLinkedList<T> implements List<T>, Iterable<T> {
      * @return the value at the specified position
      * @throws IndexOutOfBoundsException if the given position is out of range
      */
-    @Override
     public T get(int pos) {
         if (pos < 0 || pos >= size) {
             throw new IndexOutOfBoundsException();
@@ -103,7 +100,6 @@ public class DummyHeadLinkedList<T> implements List<T>, Iterable<T> {
      * @return the item removed
      * @throws IndexOutOfBoundsException if the given position is out of range
      */
-    @Override
     public T remove(int pos) {
         if (pos < 0 || pos >= size) {
             throw new IndexOutOfBoundsException();
@@ -125,17 +121,15 @@ public class DummyHeadLinkedList<T> implements List<T>, Iterable<T> {
      *
      * @return the size of the list
      */
-    @Override
     public int size() {
         return size;
     }
 
     /**
-     * Returns an iterator over the elements in this list in proper sequence.
-     *
-     * This iterator does NOT support the remove() operation.
-     *
-     * @return an iterator for the list
+     * Inner class that returns an iterator over the elements
+     * in the list in the proper sequence.
+     * 
+     * @return an iterator for iterating through the list of elements.
      */
     @Override
     public Iterator<T> iterator() {
@@ -159,3 +153,4 @@ public class DummyHeadLinkedList<T> implements List<T>, Iterable<T> {
         };
     }
 }
+
